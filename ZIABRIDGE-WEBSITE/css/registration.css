@@ -1,0 +1,358 @@
+/* ==========================================================================
+   ZIABRIDGE Business Registration & Network Platform Stylesheet
+   Theme: Dark Navy Corporate Glassmorphism & Modern Minimalist UI
+   ========================================================================== */
+
+:root {
+  --navy-dark: #0B192C;
+  --navy-card: rgba(30, 62, 98, 0.4);
+  --navy-border: rgba(255, 255, 255, 0.12);
+  --accent-cyan: #00ADB5;
+  --accent-cyan-hover: #00C4CD;
+  --accent-gold: #FFB302;
+  --text-light: #F8F9FA;
+  --text-muted: #A0AEC0;
+  --bg-gradient: linear-gradient(135deg, #0B192C 0%, #1E3E62 50%, #000000 100%);
+  --glass-bg: rgba(15, 34, 64, 0.65);
+  --glass-blur: blur(16px);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.registration-hero {
+  background: var(--bg-gradient);
+  padding: 60px 20px 40px;
+  text-align: center;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--navy-border);
+}
+
+.registration-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #FFFFFF, var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.registration-hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 750px;
+  margin: 0 auto 20px;
+}
+
+.policy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 173, 181, 0.15);
+  border: 1px solid rgba(0, 173, 181, 0.3);
+  color: var(--accent-cyan);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Category Tab Navigation */
+.category-tab-wrapper {
+  max-width: 1100px;
+  margin: -30px auto 40px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid var(--navy-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.category-tab-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.category-tab-btn:hover {
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.category-tab-btn.active {
+  background: var(--accent-cyan);
+  color: #000000;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 4px 15px rgba(0, 173, 181, 0.4);
+}
+
+/* Main Form Container */
+.registration-container {
+  max-width: 950px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.registration-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-category-header {
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--navy-border);
+}
+
+.form-category-header h2 {
+  font-size: 1.6rem;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.form-category-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Form Layout Grids */
+.reg-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.reg-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reg-form-group.full-width {
+  grid-column: span 2;
+}
+
+.reg-form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+}
+
+.req-star {
+  color: #FF4D4D;
+  margin-left: 3px;
+}
+
+.opt-tag {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Input Fields & Controls */
+.reg-input, .reg-select, .reg-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(11, 25, 44, 0.7);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius-md);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.reg-input:focus, .reg-select:focus, .reg-textarea:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.2);
+}
+
+.reg-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Phone & WhatsApp Input Group */
+.phone-group {
+  display: flex;
+  gap: 8px;
+}
+
+.phone-group select {
+  width: 110px;
+  flex-shrink: 0;
+}
+
+/* Product Pills Selector */
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.pill-checkbox {
+  display: none;
+}
+
+.pill-label {
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--navy-border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pill-checkbox:checked + .pill-label {
+  background: rgba(0, 173, 181, 0.2);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* File Upload Zone */
+.file-upload-box {
+  border: 2px dashed var(--navy-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  background: rgba(11, 25, 44, 0.4);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.file-upload-box:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(0, 173, 181, 0.05);
+}
+
+.file-upload-box p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* Validation Feedback & Notice */
+.contact-notice {
+  background: rgba(255, 179, 2, 0.1);
+  border: 1px solid rgba(255, 179, 2, 0.3);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  color: var(--accent-gold);
+  font-size: 0.88rem;
+  margin-bottom: 24px;
+}
+
+.submit-btn-wrap {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.btn-submit-reg {
+  background: linear-gradient(90deg, var(--accent-cyan), #008090);
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 173, 181, 0.4);
+  transition: var(--transition);
+
+}
+
+.btn-submit-reg:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 173, 181, 0.6);
+}
+
+.btn-submit-reg:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Notification Toast */
+.reg-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: var(--shadow-lg);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+.reg-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.reg-toast.success {
+  background: #10B981;
+}
+
+.reg-toast.error {
+  background: #EF4444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .reg-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .reg-form-group.full-width {
+    grid-column: span 1;
+  }
+  .category-tabs {
+    flex-direction: column;
+  }
+  .category-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .registration-card {
+    padding: 24px;
+  }
+}

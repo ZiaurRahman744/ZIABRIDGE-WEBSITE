@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register & Join Network | ZIABRIDGE Global Lead Generation</title>
+<meta name="description" content="Register your factory, buyer profile, freelancer portfolio, or business service with ZIABRIDGE global business network.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/registration.css">
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <div class="header-left">
+      <a href="../index.html" class="logo-link">
+        <img src="../assets/images/logo/logo-website.png" alt="ZIABRIDGE Logo" class="logo-img">
+      </a>
+      <a href="../index.html" class="home-btn desktop-only">Home</a>
+      <a href="about.html" class="home-btn desktop-only">About</a>
+    </div>
+
+    <div class="header-center">
+      <span class="brand-name"><span class="brand-zia">ZIA</span><span class="brand-bridge">BRIDGE</span></span>
+      <span class="brand-tagline">Quality You Can Trust. Global Solutions You Can Rely On.</span>
+    </div>
+
+    <div class="header-right">
+      <div class="lang-switcher">
+        <button class="lang-icon-btn" id="langToggleBtn" aria-label="Change Language">&#127760;</button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div id="google_translate_element"></div>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-header-contact desktop-only">Contact Us</a>
+      <a href="register.html" class="btn btn-primary desktop-only" style="padding:7px 14px; font-size:0.82rem; border-radius:20px;">Join Network</a>
+      <button class="btn-signin desktop-only" id="signInBtn">Sign In</button>
+
+      <button class="mobile-hamburger-btn" id="mobileMenuBtn" aria-label="Open Mobile Navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+    <div class="mobile-menu-inner">
+      <a href="../index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+      <a href="register.html" class="mobile-nav-link mobile-btn-join">Join Network</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="registration-hero">
+  <h1>ZIABRIDGE Global Business Network</h1>
+  <p>Connect your Factory, Buyer Profile, Freelance Expertise, or Business Services directly into our Global Matchmaking Database.</p>
+  <div class="policy-badge">
+    <span>&#9889; Quick & Flexible Registration: Only Name + 1 Contact Method Required</span>
+  </div>
+</section>
+
+<!-- CATEGORY TABS -->
+<div class="category-tab-wrapper">
+  <div class="category-tabs" id="categoryTabs">
+    <button class="category-tab-btn active" data-category="factory">
+      <span>&#127981;</span> Factory Registration
+    </button>
+    <button class="category-tab-btn" data-category="buyer">
+      <span>&#128092;</span> Buyer Registration
+    </button>
+    <button class="category-tab-btn" data-category="freelancer">
+      <span>&#12400;</span> Freelancer Network
+    </button>
+    <button class="category-tab-btn" data-category="job-seeker">
+      <span>&#128188;</span> Job Seeker
+    </button>
+    <button class="category-tab-btn" data-category="service-provider">
+      <span>&#129309;</span> Service Provider
+    </button>
+    <button class="category-tab-btn" data-category="general">
+      <span>&#127760;</span> General Business
+    </button>
+  </div>
+</div>
+
+<!-- REGISTRATION FORM CONTAINER -->
+<main class="registration-container">
+  <div class="registration-card">
+
+    <div class="form-category-header">
+      <h2 id="categoryTitle">Factory Registration</h2>
+      <p id="categoryDescription">Register your factory details to get matched with international buyers and apparel sourcing projects.</p>
+    </div>
+
+    <form id="ziabridgeRegForm" enctype="multipart/form-data">
+      
+      <!-- Hidden System Fields -->
+      <input type="hidden" name="category" id="formCategoryInput" value="Factory Registration">
+      <input type="hidden" name="source" id="formSourceInput" value="ZIABRIDGE Website - Direct Register">
+      <input type="hidden" name="website_id" value="ZIABRIDGE">
+
+      <!-- COMMON REQUIRED IDENTIFIERS -->
+      <div class="reg-form-grid">
+        
+        <div class="reg-form-group">
+          <label id="nameLabel">Full Name / Contact Person <span class="req-star">*</span></label>
+          <input type="text" name="name" id="regName" class="reg-input" placeholder="e.g. Mohammad Rahat" required>
+        </div>
+
+        <div class="reg-form-group" id="companyGroup">
+          <label id="companyLabel">Factory / Company Name <span class="opt-tag">(Optional)</span></label>
+          <input type="text" name="companyName" id="regCompany" class="reg-input" placeholder="e.g. Apex Textech Ltd.">
+        </div>
+
+        <div class="reg-form-group">
+          <label>Country <span class="opt-tag">(Optional)</span></label>
+          <select name="country" class="reg-select">
+            <option value="">Select Country</option>
+            <option selected>Bangladesh</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Canada</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Australia</option>
+            <option>Italy</option>
+            <option>China</option>
+            <option>India</option>
+            <option>Pakistan</option>
+            <option>Vietnam</option>
+            <option>United Arab Emirates</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="reg-form-group">
+          <label>Email Address <span class="opt-tag">(At least 1 Contact Method Req.)</span></label>
+          <input type="email" name="email" id="regEmail" class="reg-input" placeholder="yourname@domain.com">
+        </div>
+
+        <div class="reg-form-group">
+          <label>Phone Number <span class="opt-tag">(At least 1 Contact Method Req.)</span></label>
+          <div class="phone-group">
+            <select name="phoneCode" class="reg-select">
+              <option>+880</option>
+              <option>+1</option>
+              <option>+44</option>
+              <option>+91</option>
+              <option>+86</option>
+              <option>+971</option>
+              <option>+49</option>
+            </select>
+            <input type="tel" name="phone" id="regPhone" class="reg-input" placeholder="1700000000">
+          </div>
+        </div>
+
+        <div class="reg-form-group">
+          <label>WhatsApp Number <span class="opt-tag">(At least 1 Contact Method Req.)</span></label>
+          <div class="phone-group">
+            <select name="whatsappCode" class="reg-select">
+              <option>+880</option>
+              <option>+1</option>
+              <option>+44</option>
+              <option>+91</option>
+              <option>+86</option>
+              <option>+971</option>
+              <option>+49</option>
+            </select>
+            <input type="tel" name="whatsapp" id="regWhatsapp" class="reg-input" placeholder="1700000000">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="contact-notice">
+        <span>&#8505; <strong>Minimum Submission Policy:</strong> Provide your Name and at least ONE contact method (Email, Phone, or WhatsApp). All other fields below are optional.</span>
+      </div>
+
+      <!-- DYNAMIC CATEGORY FIELDS CONTAINER -->
+      <div id="dynamicCategoryFields">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- FILE UPLOAD ZONE -->
+      <div class="reg-form-group full-width" style="margin-top:20px;">
+        <label>Upload Document / Tech Pack / CV / Profile <span class="opt-tag">(Optional, Max 10MB)</span></label>
+        <div class="file-upload-box" id="fileDropZone" onclick="document.getElementById('regFileInput').click();">
+          <span style="font-size:2rem; color:var(--accent-cyan);">&#128194;</span>
+          <p id="fileNameDisplay">Click or Drag & Drop File Here (PDF, DOCX, ZIP, PNG, JPG)</p>
+          <input type="file" id="regFileInput" style="display:none;">
+        </div>
+      </div>
+
+      <!-- REMARKS & DETAILS -->
+      <div class="reg-form-group full-width" style="margin-top:20px;">
+        <label>Additional Notes / Special Instructions <span class="opt-tag">(Optional)</span></label>
+        <textarea name="remarks" class="reg-textarea" placeholder="Tell us more about your capacity, requirements, or business goals..."></textarea>
+      </div>
+
+      <div class="submit-btn-wrap">
+        <button type="submit" id="submitRegBtn" class="btn-submit-reg">Submit Registration</button>
+      </div>
+
+    </form>
+  </div>
+</main>
+
+<!-- NOTIFICATION TOAST -->
+<div id="regToast" class="reg-toast">
+  <span id="toastIcon">&#10004;</span>
+  <span id="toastMessage">Submission successful!</span>
+</div>
+
+<!-- SITE FOOTER -->
+<footer class="site-footer" id="siteFooter">
+  <div class="footer-container">
+    <div class="footer-col">
+      <img src="../assets/images/logo/logo-website.png" alt="ZIABRIDGE Logo" class="footer-logo">
+      <p class="footer-desc">Quality, innovation and global business solutions connecting buyers worldwide.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><img src="../assets/images/icons/icon-linkedin.svg" alt="LinkedIn"></a>
+        <a href="#" aria-label="Facebook"><img src="../assets/images/icons/icon-facebook.svg" alt="Facebook"></a>
+        <a href="#" aria-label="Instagram"><img src="../assets/images/icons/icon-instagram.svg" alt="Instagram"></a>
+        <a href="#" aria-label="YouTube"><img src="../assets/images/icons/icon-youtube.svg" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="register.html">Join Business Network</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="register.html?category=factory">Factory Network</a></li>
+        <li><a href="register.html?category=buyer">Buyer Sourcing</a></li>
+        <li><a href="register.html?category=freelancer">Freelancers</a></li>
+        <li><a href="register.html?category=job-seeker">Job Seekers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li>ziabridge.bd@gmail.com</li>
+        <li>+880 1825-222414</li>
+        <li>Bangladesh</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/registration.js"></script>
+<script src="../js/form-handler.js"></script>
+
+</body>
+</html>
+
