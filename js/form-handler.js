@@ -139,3 +139,70 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 4500);
   }
 });
+
+// ================================================
+// CONTACT FORM HANDLER (pages/contact.html)
+// ================================================
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
+  if (!contactForm) return;
+
+  const contactSubmitBtn = document.getElementById("contactSubmitBtn");
+  const formMessage = document.getElementById("formMessage");
+
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const originalBtnText = contactSubmitBtn.innerHTML;
+    contactSubmitBtn.disabled = true;
+    contactSubmitBtn.innerHTML = "Sending...";
+
+    try {
+      const formData = new FormData(contactForm);
+      const payload = { category: "Contact Inquiry" };
+      formData.forEach((value, key) => {
+        payload[key] = value;
+      });
+
+      const fileInput = document.getElementById("fileUpload");
+      if (fileInput && fileInput.files && fileInput.files[0]) {
+        const file = fileInput.files[0];
+        if (file.size <= 10 * 1024 * 1024) {
+          payload.fileName = file.name;
+          payload.fileType = file.type;
+          payload.fileData = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = reject;
+          });
+        }
+      }
+
+      if (typeof APPS_SCRIPT_WEB_APP_URL !== "undefined" && APPS_SCRIPT_WEB_APP_URL.trim() !== "") {
+        await fetch(APPS_SCRIPT_WEB_APP_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+      }
+
+      if (formMessage) {
+        formMessage.textContent = "Message sent successfully! We will get back to you soon.";
+        formMessage.style.color = "#2ECC71";
+      }
+      contactForm.reset();
+
+    } catch (err) {
+      console.error("Contact Submission Error:", err);
+      if (formMessage) {
+        formMessage.textContent = "Something went wrong. Please try again.";
+        formMessage.style.color = "#E74C3C";
+      }
+    } finally {
+      contactSubmitBtn.disabled = false;
+      contactSubmitBtn.innerHTML = originalBtnText;
+    }
+  });
+});
