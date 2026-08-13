@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCCB9WCYXT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CCCB9WCYXT');
+  </script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | ZIABRIDGE</title>
+<meta name="description" content="Contact ZIABRIDGE for inspection, quality control, sourcing, apparel development and business solutions.">
+<link rel="icon" type="image/png" href="../assets/images/logo/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+    <div class="header-left">
+      <a href="../index.html" class="logo-link">
+        <img src="../assets/images/logo/logo-website.png" alt="ZIABRIDGE Logo" class="logo-img">
+      </a>
+      <a href="../index.html" class="home-btn desktop-only">Home</a>
+      <a href="#siteFooter" class="home-btn desktop-only">About</a>
+    </div>
+    <div class="header-center">
+      <span class="brand-name"><span class="brand-zia">ZIA</span><span class="brand-bridge">BRIDGE</span></span>
+      <span class="brand-tagline">Quality You Can Trust. Global Solutions You Can Rely On.</span>
+    </div>
+    <div class="header-right">
+      <a href="contact.html" class="btn btn-header-contact desktop-only">Contact Us</a>
+      <a href="register.html" class="btn btn-header-join desktop-only">Join Network</a>
+      <div class="lang-switcher notranslate" translate="no">
+        <button class="lang-icon-btn" id="langToggleBtn" aria-label="Change Language">&#127760;</button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-dropdown-title notranslate" translate="no">Select Language</div>
+          <ul class="lang-native-list notranslate" id="langNativeList" translate="no"></ul>
+          <div id="google_translate_element" class="goog-te-hidden-widget"></div>
+        </div>
+      </div>
+      <button class="btn-signin desktop-only" id="signInBtn">Sign In</button>
+
+      <button class="mobile-hamburger-btn" id="mobileMenuBtn" aria-label="Open Mobile Navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+    <div class="mobile-menu-inner">
+      <a href="../index.html" class="mobile-nav-link">Home</a>
+      <a href="#siteFooter" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+      <a href="register.html" class="mobile-nav-link mobile-btn-join">Join Network</a>
+    </div>
+  </div>
+</header>
+
+<div class="signin-modal-overlay" id="signInModal">
+  <div class="signin-modal">
+    <button class="signin-close" id="signInClose">&times;</button>
+    <h3>Sign In</h3>
+    <p class="signin-note">Account login is coming soon. For now, you can browse and use ZIABRIDGE without signing in.</p>
+    <input type="email" placeholder="Email" disabled>
+    <input type="password" placeholder="Password" disabled>
+    <button class="btn btn-primary" disabled>Sign In (Coming Soon)</button>
+  </div>
+</div>
+
+<div class="page-nav-buttons">
+  <button onclick="history.back()">&#8592; Back</button>
+  <button onclick="history.forward()">Forward &#8594;</button>
+</div>
+
+<section class="page-hero contact-hero-photo">
+  <h1>Let's Connect For Your Next Business Solution</h1>
+  <p>Have a project or business requirement? Contact ZIABRIDGE and our professional team will help you find the right solution.</p>
+</section>
+
+<section class="contact-layout">
+  <form class="contact-form" id="contactForm" novalidate>
+    <div class="form-row">
+      <div><label for="fullName">Full Name</label><input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required></div>
+      <div><label for="companyName">Company Name</label><input type="text" id="companyName" name="companyName" placeholder="Your Company"></div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">Select Country</option>
+        </select>
+      </div>
+      <div><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="you@example.com" required></div>
+    </div>
+    <div class="form-row">
+      <div class="phone-field">
+        <label for="phone">Phone Number</label>
+        <div class="phone-input-group">
+          <select class="country-code" name="phoneCode" aria-label="Phone country code"></select>
+          <input type="tel" id="phone" name="phone" placeholder="1XXXXXXXXX">
+        </div>
+      </div>
+      <div class="phone-field">
+        <label for="whatsapp">WhatsApp Number</label>
+        <div class="phone-input-group">
+          <select class="country-code" name="whatsappCode" aria-label="WhatsApp country code"></select>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="1XXXXXXXXX">
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label for="serviceRequired">Service Required</label>
+        <select id="serviceRequired" name="serviceRequired">
+          <option value="">Select a Service</option>
+          <option>Inspection &amp; Quality Services</option>
+          <option>Third Party Inspection</option>
+          <option>Apparel Production Support</option>
+          <option>Sourcing Solutions</option>
+          <option>Apparel Development</option>
+          <option>Digital Business Solutions</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div><label for="productCategory" id="productCategoryLabel">Product Category</label><input type="text" id="productCategory" name="productCategory" placeholder="e.g. Woven, Knit, Denim"></div>
+    </div>
+    <div class="form-row">
+      <div><label for="orderQty">Order Quantity</label><input type="text" id="orderQty" name="orderQty" placeholder="e.g. 5000 pcs"></div>
+      <div><label for="fileUpload">File Upload (Tech Pack / Spec / Image)</label><input type="file" id="fileUpload" name="fileUpload" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"></div>
+    </div>
+    <div class="full-row">
+      <label for="projectDetails">Project Details</label>
+      <textarea id="projectDetails" name="projectDetails" placeholder="Describe your project requirement in detail"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-submit" id="contactSubmitBtn">Send Message</button>
+    <div class="form-message" id="formMessage"></div>
+  </form>
+
+  <div class="contact-info-box">
+    <h3>Contact Information</h3>
+
+    <div class="contact-detail-item">
+      <div class="contact-detail-icon">
+        <img src="../assets/images/icons/icon-email.svg" alt="Email">
+      </div>
+      <div>
+        <div class="contact-detail-label">Email</div>
+        <div class="contact-detail-value">ziabridge.bd@gmail.com</div>
+      </div>
+    </div>
+
+    <div class="contact-detail-item">
+      <div class="contact-detail-icon">
+        <img src="../assets/images/icons/icon-phone.svg" alt="Phone">
+      </div>
+      <div>
+        <div class="contact-detail-label">Phone / WhatsApp</div>
+        <div class="contact-detail-value">+880 1825-222414</div>
+      </div>
+    </div>
+
+    <div class="contact-detail-item">
+      <div class="contact-detail-icon">
+        <img src="../assets/images/icons/icon-location.svg" alt="Location">
+      </div>
+      <div>
+        <div class="contact-detail-label">Location</div>
+        <div class="contact-detail-value">Bangladesh</div>
+      </div>
+    </div>
+
+    <div class="contact-detail-item">
+      <div class="contact-detail-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div>
+        <div class="contact-detail-label">Working Hours</div>
+        <div class="contact-detail-value">Sat – Thu, 9AM – 6PM (BST)</div>
+      </div>
+    </div>
+
+    <p class="contact-social-title">Follow Us</p>
+    <div class="footer-social">
+      <a href="#" aria-label="LinkedIn"><img src="../assets/images/icons/icon-linkedin.svg" alt="LinkedIn"></a>
+      <a href="#" aria-label="Facebook"><img src="../assets/images/icons/icon-facebook.svg" alt="Facebook"></a>
+      <a href="#" aria-label="Instagram"><img src="../assets/images/icons/icon-instagram.svg" alt="Instagram"></a>
+      <a href="#" aria-label="YouTube"><img src="../assets/images/icons/icon-youtube.svg" alt="YouTube"></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <img src="../assets/images/logo/logo-website.png" alt="ZIABRIDGE Logo" class="footer-logo">
+      <p class="footer-desc">Quality, innovation and global business solutions connecting buyers worldwide.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><img src="../assets/images/icons/icon-linkedin.svg" alt="LinkedIn"></a>
+        <a href="#" aria-label="Facebook"><img src="../assets/images/icons/icon-facebook.svg" alt="Facebook"></a>
+        <a href="#" aria-label="Instagram"><img src="../assets/images/icons/icon-instagram.svg" alt="Instagram"></a>
+        <a href="#" aria-label="YouTube"><img src="../assets/images/icons/icon-youtube.svg" alt="YouTube"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul class="footer-icon-list">
+        <li><a href="../pages/about.html"><img src="../assets/images/icons/icon-about.svg" class="footer-link-icon" alt=""> About</a></li>
+        <li><a href="../pages/mission.html"><img src="../assets/images/icons/icon-mission.svg" class="footer-link-icon" alt=""> Mission</a></li>
+        <li><a href="../pages/vision.html"><img src="../assets/images/icons/icon-vision.svg" class="footer-link-icon" alt=""> Vision</a></li>
+        <li><a href="../pages/industries.html"><img src="../assets/images/icons/icon-industries.svg" class="footer-link-icon" alt=""> Industries</a></li>
+        <li><a href="../pages/why-choose-us.html"><img src="../assets/images/icons/icon-why-choose-us.svg" class="footer-link-icon" alt=""> Why Choose Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Testimonials</h4>
+      <ul class="footer-icon-list">
+        <li><a href="../pages/testimonials.html"><img src="../assets/images/icons/icon-testimonials.svg" class="footer-link-icon" alt=""> Testimonials</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul class="footer-icon-list">
+        <li><a href="../pages/faq.html"><img src="../assets/images/icons/icon-faq.svg" class="footer-link-icon" alt=""> FAQ</a></li>
+        <li><a href="../pages/coverage-area.html"><img src="../assets/images/icons/icon-coverage.svg" class="footer-link-icon" alt=""> Coverage Area</a></li>
+        <li><a href="../pages/register.html"><img src="../assets/images/icons/icon-contact.svg" class="footer-link-icon" alt=""> Join Network</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li><img src="../assets/images/icons/icon-email.svg" class="footer-contact-icon" alt=""><span>ziabridge.bd@gmail.com</span></li>
+        <li><img src="../assets/images/icons/icon-phone.svg" class="footer-contact-icon" alt=""><span>+880 1825-222414</span></li>
+        <li><img src="../assets/images/icons/icon-location.svg" class="footer-contact-icon" alt=""><span>Bangladesh</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 ZIABRIDGE. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="../pages/privacy-policy.html"><img src="../assets/images/icons/icon-privacy.svg" class="footer-link-icon" alt=""> Privacy Policy</a>
+      <a href="../pages/terms-conditions.html"><img src="../assets/images/icons/icon-terms.svg" class="footer-link-icon" alt=""> Terms &amp; Conditions</a>
+      <a href="../pages/payment-condition.html"><img src="../assets/images/icons/icon-payment.svg" class="footer-link-icon" alt=""> Payment Condition</a>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="../js/country-data.js"></script>
+<script src="../js/language-data.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/form-handler.js"></script>
+<script src="../js/live-communication.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    ziabridgePopulateCountrySelect(document.getElementById("country"), "Bangladesh");
+    ziabridgePopulatePhoneCodeSelect(document.querySelector('select[name="phoneCode"]'), "+880");
+    ziabridgePopulatePhoneCodeSelect(document.querySelector('select[name="whatsappCode"]'), "+880");
+  });
+</script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+</body>
+</html>
