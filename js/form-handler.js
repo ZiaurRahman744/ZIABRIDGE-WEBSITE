@@ -239,7 +239,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (formMessage) {
         formMessage.textContent = "Message sent successfully! We will get back to you soon.";
-        formMessage.style.color = "#2ECC71";
+        formMessage.classList.remove("error");
+        formMessage.classList.add("success");
       }
       contactForm.reset();
 
@@ -247,7 +248,8 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Contact Submission Error:", err);
       if (formMessage) {
         formMessage.textContent = "Something went wrong. Please try again.";
-        formMessage.style.color = "#E74C3C";
+        formMessage.classList.remove("success");
+        formMessage.classList.add("error");
       }
     } finally {
       contactSubmitBtn.disabled = false;

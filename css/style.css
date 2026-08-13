@@ -285,8 +285,8 @@ body {
 .btn-header-contact,
 .btn-header-join {
   height: 38px;
-  padding: 0 20px;
-  border-radius: 24px;
+  padding: 0 22px;
+  border-radius: 999px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -297,33 +297,31 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease, filter 0.25s ease;
 }
 
 .btn-header-contact {
   background: linear-gradient(135deg, #F5A623, #E8871E);
   color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(245,166,35,0.4);
+  box-shadow: 0 4px 14px rgba(245,166,35,0.45);
 }
 
 .btn-header-contact:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(245,166,35,0.55);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(245,166,35,0.6);
+  filter: brightness(1.06);
 }
 
 .btn-header-join {
-  background: rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, #2ECC71, #1DA855);
   color: #FFFFFF;
-  border-color: rgba(255,255,255,0.55);
-  box-shadow: 0 4px 14px rgba(10,22,48,0.25);
+  box-shadow: 0 4px 14px rgba(46,204,113,0.45);
 }
 
 .btn-header-join:hover {
-  background: #FFFFFF;
-  color: var(--primary-navy);
-  border-color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(46,204,113,0.6);
+  filter: brightness(1.06);
 }
 
 /* ================================================
@@ -2045,7 +2043,7 @@ body {
 .service-hero-banner .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 25, 47, 0.45) 0%, rgba(10, 25, 47, 0.72) 100%);
+  background: linear-gradient(180deg, rgba(10, 25, 47, 0.20) 0%, rgba(10, 25, 47, 0.48) 100%);
   z-index: 1;
 }
 
@@ -2421,4 +2419,93 @@ body {
   background: linear-gradient(135deg, #00E5FF, #4A90D9);
   color: #0A192F !important;
   border-color: #FFFFFF;
+}
+
+/* ================================================
+   SERVICE PAGE CASE STUDIES (sample work per service)
+   ================================================ */
+
+.case-study-section {
+  max-width: 1100px;
+}
+
+.case-study-note {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.case-study-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(10, 25, 47, 0.1);
+  border: 1px solid #EAEFF6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(10, 25, 47, 0.16);
+}
+
+.case-study-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  overflow: hidden;
+}
+
+.case-study-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.case-study-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(10, 25, 47, 0.85);
+  color: #FFFFFF;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.2px;
+}
+
+.case-study-card-body {
+  padding: 20px 22px 22px;
+}
+
+.case-study-card-client {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--secondary-light-blue);
+  margin-bottom: 6px;
+}
+
+.case-study-card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.case-study-card-desc {
+  font-size: 13.5px;
+  color: #555;
+  line-height: 1.7;
 }
