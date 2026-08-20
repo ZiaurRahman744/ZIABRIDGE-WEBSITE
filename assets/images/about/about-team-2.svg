@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17408F"/>
+      <stop offset="100%" stop-color="#0F2C66"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <g opacity="0.15">
+    <circle cx="680" cy="90" r="150" fill="#FFFFFF"/>
+    <circle cx="70" cy="520" r="110" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(400,280)" fill="none" stroke="#F5A623" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="-40" cy="-50" r="34"/>
+          <path d="M-110,55 q0,-58 70,-58 q70,0 70,58"/>
+          <circle cx="80" cy="-30" r="30"/>
+          <path d="M25,55 q0,-52 55,-52 q55,0 55,52"/>
+        </g>
+  <text x="400" y="470" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">SAMPLE WORKPLACE PHOTO</text>
+  <text x="400" y="505" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#F5A623" text-anchor="middle">At Work</text>
+  <text x="400" y="535" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#C9D6EA" text-anchor="middle">Replace this file with a real photo</text>
+</svg>

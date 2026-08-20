@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17408F"/>
+      <stop offset="100%" stop-color="#0F2C66"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  <g opacity="0.15">
+    <circle cx="680" cy="90" r="150" fill="#FFFFFF"/>
+    <circle cx="70" cy="520" r="110" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(400,280)" fill="none" stroke="#F5A623" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="0" cy="0" r="95"/>
+          <polyline points="-40,5 -12,35 45,-35"/>
+        </g>
+  <text x="400" y="470" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">SAMPLE QUALITY CHECK PHOTO</text>
+  <text x="400" y="505" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#F5A623" text-anchor="middle">Quality First</text>
+  <text x="400" y="535" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#C9D6EA" text-anchor="middle">Replace this file with a real photo</text>
+</svg>

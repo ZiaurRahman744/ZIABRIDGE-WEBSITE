@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17408F"/>
+      <stop offset="100%" stop-color="#0F2C66"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg5)"/>
+  <g opacity="0.15">
+    <circle cx="680" cy="90" r="150" fill="#FFFFFF"/>
+    <circle cx="70" cy="520" r="110" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(400,280)" fill="none" stroke="#F5A623" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M-110,-10 l45,-45 a30,30 0 0 1 42,0 l3,3 3,-3 a30,30 0 0 1 42,0 a30,30 0 0 1 0,42 l-45,45 z"/>
+          <path d="M20,-10 l45,-45 a30,30 0 0 1 42,0 l3,3 3,-3 a30,30 0 0 1 42,0 a30,30 0 0 1 0,42 l-45,45 z" transform="translate(-40,10) scale(0.001)" opacity="0"/>
+          <path d="M-60,50 l35,35 l90,-90"/>
+        </g>
+  <text x="400" y="470" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">SAMPLE PARTNERSHIP / VALUES PHOTO</text>
+  <text x="400" y="505" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#F5A623" text-anchor="middle">Trust &amp; Values</text>
+  <text x="400" y="535" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#C9D6EA" text-anchor="middle">Replace this file with a real photo</text>
+</svg>

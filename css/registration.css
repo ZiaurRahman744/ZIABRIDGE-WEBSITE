@@ -27,6 +27,27 @@
   text-align: center;
   color: var(--text-light);
   border-bottom: 1px solid var(--navy-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.registration-hero-photo {
+  background-image: url("../assets/images/pages/register-hero.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.registration-hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11,25,44,0.82) 0%, rgba(30,62,98,0.75) 50%, rgba(0,0,0,0.85) 100%);
+  z-index: 0;
+}
+
+.registration-hero-photo > * {
+  position: relative;
+  z-index: 1;
 }
 
 .registration-hero h1 {
@@ -361,5 +382,11 @@
   }
   .registration-card {
     padding: 24px;
+  }
+  .registration-hero h1 {
+    font-size: 1.7rem;
+  }
+  .registration-hero p {
+    font-size: 0.95rem;
   }
 }
