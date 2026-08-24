@@ -231,7 +231,13 @@
   .services-grid,
   .card-grid,
   .process-steps,
-  .gallery-grid {
+  .gallery-grid,
+  .case-study-grid,
+  .rating-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rating-dashboard {
     grid-template-columns: 1fr;
   }
 

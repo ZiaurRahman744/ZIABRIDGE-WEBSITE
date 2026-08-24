@@ -284,8 +284,8 @@ body {
 
 .btn-header-contact,
 .btn-header-join {
-  padding: 8px 20px;
-  border-radius: 20px;
+  padding: 8px 22px;
+  border-radius: 50px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -1059,6 +1059,64 @@ body {
   background: rgba(10, 22, 48, 0.62);
 }
 
+/* Generic reusable photo-hero treatment for other pages (Coverage Area,
+   Mission, Vision, Industries, Why Choose Us, Join Network, etc.) -
+   set the actual image per page via an inline background-image style,
+   this class only supplies the sizing + overlay behavior. */
+.page-hero-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-hero-photo::before {
+  background: rgba(10, 22, 48, 0.60);
+}
+
+.page-map-embed {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px 10px;
+}
+
+.page-map-embed iframe {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(23, 64, 143, 0.18);
+}
+
+.region-icon-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  text-align: center;
+}
+
+.region-icon-item {
+  background: #F6FAFE;
+  border: 1px solid #DCE6F2;
+  border-radius: 12px;
+  padding: 18px 10px;
+}
+
+.region-icon-item svg {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 8px;
+}
+
+.region-icon-item span {
+  display: block;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--primary-navy);
+}
+
 /* ================================================
    GENERIC CONTENT SECTION
    ================================================ */
@@ -1120,6 +1178,21 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
+}
+
+/* Two-column variant used on service pages (Services Include / Benefits
+   cards). Uses a class instead of an inline style so the mobile
+   override in responsive.css (.card-grid -> 1fr) can still apply -
+   an inline style would otherwise always win and break on mobile. */
+.card-grid-2col {
+  padding-top: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 700px) {
+  .card-grid-2col {
+    grid-template-columns: 1fr;
+  }
 }
 
 .info-card {
@@ -2550,4 +2623,47 @@ body {
   font-size: 13.5px;
   color: #555;
   line-height: 1.7;
+}
+
+/* ================================================
+   PAGE PHOTO GALLERY (About page and similar sections
+   sitewide - reusable classes, currently populated with
+   coded placeholder graphics until real photos are added)
+   ================================================ */
+
+.page-photo-gallery {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.page-photo-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(23, 64, 143, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-photo-gallery img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(23, 64, 143, 0.25);
+}
+
+.page-photo-banner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px 40px;
+}
+
+.page-photo-banner img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(23, 64, 143, 0.18);
 }
