@@ -41,7 +41,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11,25,44,0.82) 0%, rgba(30,62,98,0.75) 50%, rgba(0,0,0,0.85) 100%);
+  background: linear-gradient(135deg, rgba(11,25,44,0.35) 0%, rgba(30,62,98,0.28) 50%, rgba(0,0,0,0.38) 100%);
   z-index: 0;
 }
 
@@ -57,6 +57,7 @@
   background: linear-gradient(90deg, #FFFFFF, var(--accent-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.5));
 }
 
 .registration-hero p {
@@ -64,6 +65,7 @@
   color: var(--text-muted);
   max-width: 750px;
   margin: 0 auto 20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 .policy-badge {

@@ -139,6 +139,21 @@
     line-height: 1.1;
   }
 
+  .brand-zia {
+    text-shadow:
+      0 1px 0 #D3E4F8,
+      0 2px 0 #BEDAF4,
+      0 3px 2px rgba(0,0,0,0.25),
+      0 4px 6px rgba(0,0,0,0.25);
+  }
+
+  .brand-bridge {
+    filter:
+      drop-shadow(0 1px 0 #A9CDF4)
+      drop-shadow(0 2px 0 #93BFEF)
+      drop-shadow(0 3px 3px rgba(0,0,0,0.25));
+  }
+
   .brand-name::after {
     width: 24px;
     height: 1.5px;
