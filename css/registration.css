@@ -38,11 +38,7 @@
 }
 
 .registration-hero-photo::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(11,25,44,0.35) 0%, rgba(30,62,98,0.28) 50%, rgba(0,0,0,0.38) 100%);
-  z-index: 0;
+  content: none;
 }
 
 .registration-hero-photo > * {

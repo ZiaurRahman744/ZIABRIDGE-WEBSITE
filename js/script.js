@@ -387,6 +387,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })();
 
+  // ================================================
+  // CASE STUDY CARD - SHARE BUTTON
+  // Uses the native device Share sheet when available (mobile browsers,
+  // most modern desktop browsers); falls back to copying the page link
+  // to the clipboard if the Web Share API isn't supported.
+  // ================================================
+  document.querySelectorAll(".case-study-share-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const card = btn.closest(".case-study-card");
+      const title = card ? card.querySelector(".case-study-card-title") : null;
+      const shareData = {
+        title: title ? title.textContent.trim() : "ZIABRIDGE Case Study",
+        text: "Take a look at this ZIABRIDGE project case study:",
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData).catch(function () {
+          // user cancelled or share failed silently - no action needed
+        });
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareData.url).then(function () {
+          const original = btn.textContent;
+          btn.textContent = "Link Copied!";
+          setTimeout(function () {
+            btn.innerHTML = original;
+          }, 1800);
+        });
+      }
+    });
+  });
+
 });
 
 
