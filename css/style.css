@@ -2723,3 +2723,11 @@ body {
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(23, 64, 143, 0.18);
 }
+
+/* Inspection + Third-Party Inspection cards merged into one on the
+   homepage. This card is hidden (not deleted) so it can be brought back
+   or repurposed later without rebuilding anything - see services/inspection.html,
+   which still exists and now points to the merged page via canonical tag. */
+.service-card-merged-hidden {
+  display: none;
+}
