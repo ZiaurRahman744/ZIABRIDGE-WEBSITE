@@ -160,13 +160,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const productCategoryLabel = document.getElementById("productCategoryLabel");
 
   const SERVICE_PRODUCT_EXAMPLES = {
-    "Inspection & Quality Services": {
+    "Third-Party Garment Inspection & Quality Control": {
       label: "Product Category",
-      placeholder: "e.g. Woven, Knit, Denim, Home Textile"
-    },
-    "Third Party Inspection": {
-      label: "Product Category",
-      placeholder: "e.g. Garments, Footwear, Accessories"
+      placeholder: "e.g. Woven, Knit, Denim, Footwear, Accessories"
     },
     "Apparel Production Support": {
       label: "Product / Order Type",
@@ -186,6 +182,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  // Specific sub-services shown on each service's own page - kept in sync
+  // here so a visitor can pick the exact service they need in the
+  // Contact form, matching what's publicly listed on each service page.
+  const SERVICE_SUB_ITEMS = {
+    "Third-Party Garment Inspection & Quality Control": [
+      "Pre-Production and Fabric Inspection",
+      "Inline Inspection (During Production)",
+      "Final Random Inspection (AQL)",
+      "Pre-Shipment Inspection",
+      "Measurement and Workmanship Check",
+      "Needle and Metal Detection",
+      "Packing and Carton Inspection"
+    ],
+    "Apparel Production Support": [
+      "Production Follow-up",
+      "Quality Monitoring",
+      "Technical Support",
+      "Manufacturing Guidance",
+      "Production Improvement"
+    ],
+    "Sourcing Solutions": [
+      "Factory Searching",
+      "Supplier Coordination",
+      "Product Development Support",
+      "Production Communication",
+      "Sourcing Assistance"
+    ],
+    "Apparel Development": [
+      "Sample Development",
+      "Tech Pack Support",
+      "Pattern Support",
+      "Product Analysis",
+      "Development Follow-up"
+    ],
+    "Digital Business Solutions": [
+      "Website Development",
+      "Digital Branding",
+      "Online Business Solutions",
+      "Business Support Services"
+    ]
+  };
+
+  const specificRequirementSelect = document.getElementById("specificRequirement");
+
   if (serviceSelect && productCategoryInput) {
     serviceSelect.addEventListener("change", function () {
       const config = SERVICE_PRODUCT_EXAMPLES[serviceSelect.value];
@@ -195,6 +235,32 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         if (productCategoryLabel) productCategoryLabel.textContent = "Product Category";
         productCategoryInput.placeholder = "e.g. Woven, Knit, Denim";
+      }
+
+      if (specificRequirementSelect) {
+        const subItems = SERVICE_SUB_ITEMS[serviceSelect.value];
+        specificRequirementSelect.innerHTML = "";
+        if (subItems && subItems.length > 0) {
+          specificRequirementSelect.disabled = false;
+          const placeholderOpt = document.createElement("option");
+          placeholderOpt.value = "";
+          placeholderOpt.textContent = "Select a specific requirement";
+          specificRequirementSelect.appendChild(placeholderOpt);
+          subItems.forEach(function (item) {
+            const opt = document.createElement("option");
+            opt.textContent = item;
+            specificRequirementSelect.appendChild(opt);
+          });
+          const otherOpt = document.createElement("option");
+          otherOpt.textContent = "Other / Not Listed";
+          specificRequirementSelect.appendChild(otherOpt);
+        } else {
+          specificRequirementSelect.disabled = true;
+          const placeholderOpt = document.createElement("option");
+          placeholderOpt.value = "";
+          placeholderOpt.textContent = "Select a service above first";
+          specificRequirementSelect.appendChild(placeholderOpt);
+        }
       }
     });
   }
