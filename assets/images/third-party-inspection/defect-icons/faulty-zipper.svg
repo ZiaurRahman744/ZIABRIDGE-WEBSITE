@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="faulty-zipper defect diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <rect x="35" y="35" width="90" height="90" rx="6" fill="#B9C9DE"/>
+  <line x1="70" y1="45" x2="90" y2="45" stroke="#17408F" stroke-width="3"/><line x1="67" y1="53" x2="93" y2="53" stroke="#17408F" stroke-width="3"/><line x1="70" y1="61" x2="90" y2="61" stroke="#17408F" stroke-width="3"/><line x1="67" y1="69" x2="93" y2="69" stroke="#17408F" stroke-width="3"/><line x1="70" y1="77" x2="90" y2="77" stroke="#17408F" stroke-width="3"/><line x1="67" y1="85" x2="93" y2="85" stroke="#17408F" stroke-width="3"/><line x1="70" y1="93" x2="90" y2="93" stroke="#17408F" stroke-width="3"/><line x1="67" y1="101" x2="93" y2="101" stroke="#17408F" stroke-width="3"/><line x1="70" y1="109" x2="90" y2="109" stroke="#17408F" stroke-width="3"/><line x1="67" y1="117" x2="93" y2="117" stroke="#17408F" stroke-width="3"/><rect x="72" y="78" width="16" height="10" fill="#E74C3C"/>
+</svg>

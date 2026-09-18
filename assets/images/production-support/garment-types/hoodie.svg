@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="hoodie silhouette">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <path d="M60 35 Q80 20 100 35 L112 45 L100 55 L100 60 L112 70 L125 65 L115 45 L100 35 Q90 48 80 48 Q70 48 60 35 L45 45 L35 65 L48 70 L60 60 V125 H100 V60" fill="#17408F" opacity="0.85"/>
+</svg>

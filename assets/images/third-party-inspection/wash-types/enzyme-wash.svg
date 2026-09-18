@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="enzyme-wash swatch diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <rect x="40" y="40" width="80" height="80" rx="6" fill="#6E93C9"/>
+<line x1="48" y1="55" x2="112" y2="55" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+<line x1="48" y1="75" x2="112" y2="75" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+<line x1="48" y1="95" x2="112" y2="95" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+<line x1="48" y1="115" x2="112" y2="115" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+</svg>

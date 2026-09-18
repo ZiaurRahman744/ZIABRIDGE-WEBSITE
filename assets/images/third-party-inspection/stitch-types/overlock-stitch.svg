@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="overlock-stitch diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <line x1="110" y1="30" x2="110" y2="130" stroke="#9AA3AF" stroke-width="2"/>
+<path d="M 90 35 Q 120 29 90 22" fill="none" stroke="#17408F" stroke-width="3"/><path d="M 90 48 Q 120 42 90 35" fill="none" stroke="#17408F" stroke-width="3"/><path d="M 90 61 Q 120 55 90 48" fill="none" stroke="#17408F" stroke-width="3"/><path d="M 90 74 Q 120 68 90 61" fill="none" stroke="#17408F" stroke-width="3"/><path d="M 90 87 Q 120 81 90 74" fill="none" stroke="#17408F" stroke-width="3"/><path d="M 90 100 Q 120 94 90 87" fill="none" stroke="#17408F" stroke-width="3"/><path d="M 90 113 Q 120 107 90 100" fill="none" stroke="#17408F" stroke-width="3"/><path d="M 90 126 Q 120 120 90 113" fill="none" stroke="#17408F" stroke-width="3"/>
+</svg>

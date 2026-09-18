@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="chainstitch diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <line x1="25" y1="80" x2="135" y2="80" stroke="#9AA3AF" stroke-width="1.5" stroke-dasharray="2 4"/><circle cx="35" cy="80" r="6" fill="none" stroke="#17408F" stroke-width="3"/><circle cx="48" cy="80" r="6" fill="none" stroke="#17408F" stroke-width="3"/><circle cx="61" cy="80" r="6" fill="none" stroke="#17408F" stroke-width="3"/><circle cx="74" cy="80" r="6" fill="none" stroke="#17408F" stroke-width="3"/><circle cx="87" cy="80" r="6" fill="none" stroke="#17408F" stroke-width="3"/><circle cx="100" cy="80" r="6" fill="none" stroke="#17408F" stroke-width="3"/><circle cx="113" cy="80" r="6" fill="none" stroke="#17408F" stroke-width="3"/><circle cx="126" cy="80" r="6" fill="none" stroke="#17408F" stroke-width="3"/>
+</svg>

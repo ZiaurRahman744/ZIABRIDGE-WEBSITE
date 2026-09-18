@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="asymmetry defect diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <rect x="35" y="35" width="90" height="90" rx="6" fill="#B9C9DE"/>
+  <path d="M55 50 Q65 40 75 50 L75 90 L55 90 Z" fill="#17408F"/><path d="M95 55 Q105 48 112 58 L112 90 L95 90 Z" fill="#17408F" opacity="0.55"/>
+</svg>

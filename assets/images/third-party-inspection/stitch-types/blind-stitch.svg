@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="blind-stitch diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <line x1="25" y1="70" x2="135" y2="70" stroke="#17408F" stroke-width="3"/>
+<line x1="35" y1="70" x2="38" y2="82" stroke="#17408F" stroke-width="2"/><line x1="49" y1="70" x2="52" y2="82" stroke="#17408F" stroke-width="2"/><line x1="63" y1="70" x2="66" y2="82" stroke="#17408F" stroke-width="2"/><line x1="77" y1="70" x2="80" y2="82" stroke="#17408F" stroke-width="2"/><line x1="91" y1="70" x2="94" y2="82" stroke="#17408F" stroke-width="2"/><line x1="105" y1="70" x2="108" y2="82" stroke="#17408F" stroke-width="2"/><line x1="119" y1="70" x2="122" y2="82" stroke="#17408F" stroke-width="2"/>
+<line x1="25" y1="95" x2="135" y2="95" stroke="#9AA3AF" stroke-width="1.5" stroke-dasharray="3 3"/>
+</svg>

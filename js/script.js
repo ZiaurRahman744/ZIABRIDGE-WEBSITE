@@ -86,6 +86,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // --- Knowledge Hub: collapsible topic list -------------------------
+  // The full question list starts collapsed under a "Browse All Topics"
+  // button, so it doesn't visually run into the section below it. Works
+  // on any page that has this button/list pair (event delegation), so
+  // future Knowledge Hub pages get this automatically with no extra JS.
+  document.querySelectorAll(".kb-hub-toggle-btn").forEach(function (btn) {
+    const targetId = btn.getAttribute("aria-controls");
+    const list = targetId ? document.getElementById(targetId) : null;
+    if (!list) return;
+    btn.addEventListener("click", function () {
+      const isOpen = list.classList.toggle("kb-hub-open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      btn.querySelector("span:first-child").textContent = isOpen
+        ? "Hide Topics"
+        : "Browse All Topics";
+    });
+  });
+
 // Language Dropdown Toggle
   const langToggleBtn = document.getElementById("langToggleBtn");
   const langDropdown = document.getElementById("langDropdown");
@@ -96,6 +114,48 @@ document.addEventListener("DOMContentLoaded", function () {
   // how many languages are rendered.
   if (langNativeList && typeof ziabridgePopulateLanguageList === "function") {
     ziabridgePopulateLanguageList(langNativeList);
+  }
+
+  // --- Site-wide language persistence -------------------------------
+  // The chosen language is saved to localStorage (shared across every
+  // page, since localStorage is per-domain, not per-page). On every
+  // page load we check for a saved choice and, if one exists, apply it
+  // to that page's own Google Translate widget automatically - so the
+  // person only has to pick a language once, not on every page.
+  const ZIABRIDGE_LANG_KEY = "ziabridgeSelectedLang";
+
+  function applyGoogleTranslate(langCode, attemptsLeft) {
+    const combo = document.querySelector("#google_translate_element select.goog-te-combo");
+    if (combo) {
+      combo.value = langCode;
+      combo.dispatchEvent(new Event("change"));
+    } else if (attemptsLeft > 0) {
+      // Google's widget can take a moment to finish injecting its
+      // hidden select on first load - retry briefly before giving up.
+      setTimeout(function () {
+        applyGoogleTranslate(langCode, attemptsLeft - 1);
+      }, 300);
+    }
+  }
+
+  function markActiveLangInList(langCode) {
+    if (!langNativeList) return;
+    langNativeList.querySelectorAll("li").forEach(function (li) {
+      li.classList.toggle("active", li.getAttribute("data-lang-code") === langCode);
+    });
+  }
+
+  // On every page load: if the person previously chose a language other
+  // than English, re-apply it here automatically.
+  try {
+    const savedLang = localStorage.getItem(ZIABRIDGE_LANG_KEY);
+    if (savedLang && savedLang !== "en") {
+      applyGoogleTranslate(savedLang, 15);
+      markActiveLangInList(savedLang);
+    }
+  } catch (err) {
+    // localStorage can be unavailable (e.g. some in-app browsers/privacy
+    // modes) - fail silently and just leave the page in English.
   }
 
   if (langToggleBtn && langDropdown) {
@@ -113,7 +173,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Native-language list drives the existing Google Translate widget.
     // The widget itself, its script, and its translation behavior are
-    // untouched - this only forwards the chosen language to it.
+    // untouched - this only forwards the chosen language to it, and now
+    // also remembers the choice for every other page on the site.
     // Event delegation is used since the list is generated dynamically.
     if (langNativeList) {
       langNativeList.addEventListener("click", function (e) {
@@ -122,25 +183,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const langCode = item.getAttribute("data-lang-code");
 
-        function applyGoogleTranslate(attemptsLeft) {
-          const combo = document.querySelector("#google_translate_element select.goog-te-combo");
-          if (combo) {
-            combo.value = langCode;
-            combo.dispatchEvent(new Event("change"));
-          } else if (attemptsLeft > 0) {
-            // Google's widget can take a moment to finish injecting its
-            // hidden select on first load - retry briefly before giving up.
-            setTimeout(function () {
-              applyGoogleTranslate(attemptsLeft - 1);
-            }, 300);
-          }
-        }
-        applyGoogleTranslate(10);
+        applyGoogleTranslate(langCode, 10);
+        markActiveLangInList(langCode);
 
-        langNativeList.querySelectorAll("li").forEach(function (li) {
-          li.classList.remove("active");
-        });
-        item.classList.add("active");
+        try {
+          localStorage.setItem(ZIABRIDGE_LANG_KEY, langCode);
+        } catch (err) {
+          // Ignore if localStorage isn't available - translation still
+          // works for the current page, it just won't carry over.
+        }
 
         langDropdown.classList.remove("open");
         langToggleBtn.classList.remove("active");

@@ -1,0 +1,4 @@
+{
+  "layout": "knowledge-layout.njk",
+  "permalink": "services/{{ category }}/{{ slug }}.html"
+}
