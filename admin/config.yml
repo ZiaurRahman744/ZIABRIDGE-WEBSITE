@@ -1,11 +1,12 @@
 backend:
   name: github
-  repo: ZiaurRahman744/ZIABRIDGE-WEBSITE   # <-- update this
+  repo: ZiaurRahman744/ZIABRIDGE-WEBSITE
   branch: main
-  base_url: https://api.netlify.com          # free OAuth proxy (see note below)
+  base_url: https://api.netlify.com
   auth_endpoint: auth
+  site_domain: idyllic-speculoos-9acbcf.netlify.app
 
-# Where uploaded images get stored in the repo, and how the CMS links to them.
+# Uploaded images will be stored here in the repository.
 media_folder: "assets/images/cms-uploads"
 public_folder: "/assets/images/cms-uploads"
 
@@ -15,19 +16,61 @@ collections:
     folder: "content/knowledge"
     create: true
     slug: "{{slug}}"
+
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "knowledge-layout.njk" }
-      - { label: "Service Category", name: "category", widget: "select", options: [
-            { label: "Third-Party Inspection", value: "third-party-inspection" },
-            { label: "Production Support", value: "production-support" }
-          ] }
-      - { label: "Category Display Name", name: "category_label", widget: "hidden", default: "" }
-      - { label: "Hub Section Label", name: "hub_label", widget: "hidden", default: "" }
-      - { label: "URL Slug", name: "slug", widget: "string", hint: "Used in the page URL — lowercase, hyphens only, e.g. elastic-waistband-quality" }
-      - { label: "Page Title (SEO)", name: "title", widget: "string" }
-      - { label: "Meta Description (SEO)", name: "description", widget: "text" }
-      - { label: "Breadcrumb Label", name: "breadcrumb", widget: "string" }
-      - { label: "Headline (H1)", name: "h1", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Hero Image", name: "hero_image", widget: "image" }
-      - { label: "Article Body", name: "body", widget: "markdown" }
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "knowledge-layout.njk"
+
+      - label: "Service Category"
+        name: "category"
+        widget: "select"
+        options:
+          - label: "Third-Party Inspection"
+            value: "third-party-inspection"
+          - label: "Production Support"
+            value: "production-support"
+
+      - label: "Category Display Name"
+        name: "category_label"
+        widget: "hidden"
+        default: ""
+
+      - label: "Hub Section Label"
+        name: "hub_label"
+        widget: "hidden"
+        default: ""
+
+      - label: "URL Slug"
+        name: "slug"
+        widget: "string"
+        hint: "Used in the page URL — lowercase, hyphens only, e.g. elastic-waistband-quality"
+
+      - label: "Page Title (SEO)"
+        name: "title"
+        widget: "string"
+
+      - label: "Meta Description (SEO)"
+        name: "description"
+        widget: "text"
+
+      - label: "Breadcrumb Label"
+        name: "breadcrumb"
+        widget: "string"
+
+      - label: "Headline (H1)"
+        name: "h1"
+        widget: "string"
+
+      - label: "Subtitle"
+        name: "subtitle"
+        widget: "string"
+
+      - label: "Hero Image"
+        name: "hero_image"
+        widget: "image"
+
+      - label: "Article Body"
+        name: "body"
+        widget: "markdown"
