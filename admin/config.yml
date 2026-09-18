@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ZiaurRahman744/ZIABRIDGE-WEBSITE-main   # <-- update this
+  repo: ZiaurRahman744/ZIABRIDGE-WEBSITE   # <-- update this
   branch: main
   base_url: https://api.netlify.com          # free OAuth proxy (see note below)
   auth_endpoint: auth
