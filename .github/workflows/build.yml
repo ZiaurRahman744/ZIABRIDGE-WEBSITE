@@ -32,17 +32,6 @@ jobs:
       - name: Build site with Eleventy
         run: npx @11ty/eleventy
 
-      - name: Copy existing static pages into the build output
-        # Everything that is NOT yet a CMS-managed Knowledge article (the
-        # homepage, other service pages, the pages/ folder, etc.) is plain
-        # static HTML and just needs to be copied through as-is, so nothing
-        # about the rest of the site changes.
-        run: |
-          rsync -av --exclude 'content' --exclude '_site' --exclude 'node_modules' \
-            --exclude '.eleventy.js' --exclude 'package.json' --exclude 'package-lock.json' \
-            --exclude '_includes' --exclude '.git' --exclude '.github' \
-            ./ ./_site/
-
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:

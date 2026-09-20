@@ -1,13 +1,21 @@
 module.exports = function (eleventyConfig) {
-  // Copy static assets straight through untouched (mirrors the existing
-  // site's own asset folders once merged into the real repo).
+  // Copy the ENTIRE existing static site straight through, untouched.
+  // This was previously only copying a hand-picked few paths (a leftover
+  // from local testing), which meant most of the real site — every other
+  // service page, and all 48 Knowledge topic pages — never made it into
+  // the deployed build. Fixed: everything real now passes through as-is.
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("pages");
+  eleventyConfig.addPassthroughCopy("seo");
+  eleventyConfig.addPassthroughCopy("google-apps-script");
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("services");
   eleventyConfig.addPassthroughCopy("index.html");
-  eleventyConfig.addPassthroughCopy("services/third-party-inspection.html");
+  eleventyConfig.addPassthroughCopy("sitemap.xml");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   return {
     dir: {
@@ -15,8 +23,9 @@ module.exports = function (eleventyConfig) {
       includes: "../_includes",
       output: "_site"
     },
-    // Markdown files keep their own explicit permalink (set per file via
-    // frontmatter), so the URL structure matches the existing site exactly:
-    // services/<category>/<slug>.html
+    // New CMS-published articles (content/knowledge/*.md) get generated
+    // into services/<category>/<slug>.html automatically, landing right
+    // alongside the passthrough-copied existing pages above — nothing
+    // overwrites or conflicts, since these are new filenames.
   };
 };
