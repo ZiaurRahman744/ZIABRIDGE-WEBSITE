@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="star defect diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <rect x="35" y="35" width="90" height="90" rx="6" fill="#B9C9DE"/>
+  <path d="M80 62 L86 76 L101 76 L89 85 L94 100 L80 91 L66 100 L71 85 L59 76 L74 76 Z" fill="#E74C3C"/>
+</svg>

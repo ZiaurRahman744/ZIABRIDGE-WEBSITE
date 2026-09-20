@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="dtg-printing diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <rect x="55" y="90" width="50" height="35" fill="#17408F" opacity="0.5"/>
+<rect x="45" y="55" width="70" height="20" rx="4" fill="#17408F"/>
+<line x1="80" y1="75" x2="80" y2="90" stroke="#9AA3AF" stroke-width="3"/>
+</svg>

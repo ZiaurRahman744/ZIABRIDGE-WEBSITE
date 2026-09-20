@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Illustration of an inspector checking a garment against a checklist">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF1FB"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+  <rect x="0" y="480" width="800" height="120" fill="#E5E8EC"/>
+
+  <!-- garment rack -->
+  <line x1="80" y1="120" x2="720" y2="120" stroke="#17408F" stroke-width="8" stroke-linecap="round"/>
+  <line x1="80" y1="120" x2="80" y2="480" stroke="#17408F" stroke-width="8"/>
+  <line x1="720" y1="120" x2="720" y2="480" stroke="#17408F" stroke-width="8"/>
+
+  <!-- hanging garments -->
+  <g>
+    <path d="M150 140 q20 -25 40 0 l18 26 -18 14 v170 h-80 v-170 l18 -14 z" fill="#4A90D9"/>
+    <path d="M290 140 q20 -25 40 0 l18 26 -18 14 v170 h-80 v-170 l18 -14 z" fill="#2ECC71"/>
+    <path d="M430 140 q20 -25 40 0 l18 26 -18 14 v170 h-80 v-170 l18 -14 z" fill="#FFFFFF" stroke="#B9C2CE" stroke-width="3"/>
+  </g>
+
+  <!-- inspector figure (simple flat silhouette) -->
+  <g transform="translate(540,230)">
+    <circle cx="60" cy="30" r="28" fill="#0F2C66"/>
+    <path d="M10 260 Q10 120 60 110 Q110 120 110 260 Z" fill="#17408F"/>
+    <rect x="20" y="150" width="80" height="60" rx="10" fill="#FFFFFF"/>
+    <g stroke="#17408F" stroke-width="5" stroke-linecap="round">
+      <line x1="32" y1="170" x2="88" y2="170"/>
+      <line x1="32" y1="188" x2="70" y2="188"/>
+    </g>
+    <circle cx="32" cy="170" r="4" fill="#2ECC71"/>
+  </g>
+
+  <!-- magnifier over a defect point on the white garment -->
+  <g transform="translate(400,300)">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#17408F" stroke-width="10"/>
+    <line x1="82" y1="82" x2="120" y2="120" stroke="#17408F" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="50" cy="50" r="8" fill="#E74C3C"/>
+  </g>
+</svg>

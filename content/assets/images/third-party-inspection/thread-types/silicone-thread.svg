@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="silicone-thread diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  
+<rect x="55" y="35" width="50" height="14" rx="3" fill="#9AA3AF"/>
+<rect x="55" y="111" width="50" height="14" rx="3" fill="#9AA3AF"/>
+<rect x="62" y="49" width="36" height="62" fill="#B9C2CE"/>
+<line x1="62" y1="60" x2="98" y2="60" stroke="#ffffff" stroke-width="2" opacity="0.6"/><line x1="62" y1="80" x2="98" y2="80" stroke="#ffffff" stroke-width="2" opacity="0.6"/><line x1="62" y1="100" x2="98" y2="100" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+
+</svg>

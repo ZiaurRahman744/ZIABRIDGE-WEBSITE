@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="heat-transfer-printing diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <path d="M50 60 L110 60 L100 90 L60 90 Z" fill="#9AA3AF"/>
+<rect x="65" y="100" width="30" height="20" fill="#17408F" opacity="0.6"/>
+</svg>

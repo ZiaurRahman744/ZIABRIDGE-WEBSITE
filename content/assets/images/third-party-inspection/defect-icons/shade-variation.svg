@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="shade-variation defect diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <rect x="35" y="35" width="90" height="90" rx="6" fill="#B9C9DE"/>
+  <rect x="35" y="35" width="45" height="90" fill="#B9C9DE"/><rect x="80" y="35" width="45" height="90" fill="#7C93B8"/>
+</svg>

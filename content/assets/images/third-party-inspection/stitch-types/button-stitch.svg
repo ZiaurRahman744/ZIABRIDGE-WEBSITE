@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="button-stitch diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <circle cx="65" cy="80" r="5" fill="none" stroke="#9AA3AF" stroke-width="2"/>
+<circle cx="95" cy="80" r="5" fill="none" stroke="#9AA3AF" stroke-width="2"/>
+<line x1="61" y1="76" x2="99" y2="84" stroke="#17408F" stroke-width="3"/>
+<line x1="61" y1="84" x2="99" y2="76" stroke="#17408F" stroke-width="3"/>
+</svg>

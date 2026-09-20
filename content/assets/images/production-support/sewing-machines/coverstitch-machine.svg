@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="coverstitch-machine machine diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <path d="M40 110 h80 v10 h-80 z" fill="#9AA3AF"/>
+  <path d="M55 60 q0 -25 25 -25 h20 v20 h-15 q-10 0 -10 10 v20 h-20 z" fill="#17408F" opacity="0.85"/>
+  <line x1="62" y1="75" x2="62" y2="108" stroke="#17408F" stroke-width="3"/><line x1="72" y1="75" x2="72" y2="108" stroke="#17408F" stroke-width="3"/><line x1="82" y1="75" x2="82" y2="108" stroke="#17408F" stroke-width="3"/><line x1="50" y1="118" x2="100" y2="118" stroke="#2ECC71" stroke-width="2" stroke-dasharray="4 3"/><line x1="50" y1="124" x2="100" y2="124" stroke="#2ECC71" stroke-width="2" stroke-dasharray="4 3"/>
+</svg>

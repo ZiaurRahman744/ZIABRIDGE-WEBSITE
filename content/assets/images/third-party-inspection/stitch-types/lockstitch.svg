@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="lockstitch diagram">
+  <rect x="4" y="4" width="152" height="152" rx="12" fill="#F4F6F9" stroke="#D7DCE3" stroke-width="2"/>
+  <line x1="25" y1="80" x2="135" y2="80" stroke="#9AA3AF" stroke-width="2" stroke-dasharray="2 4"/>
+<line x1="30" y1="80" x2="130" y2="80" stroke="#17408F" stroke-width="4" stroke-dasharray="10 6"/>
+</svg>
